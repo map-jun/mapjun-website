@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapJun - 대학원 입시 전자책</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>MapJun</h1>
+                <span>대학원 입시 전문</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">홈</a>
+                <a href="#about">소개</a>
+                <a href="#contact">연락처</a>
+                <div class="auth-buttons">
+                    <button id="loginBtn" class="btn-secondary">로그인</button>
+                    <button id="signupBtn" class="btn-primary">회원가입</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <h2>대학원 합격을 위한<br>최고의 입시 자료</h2>
+                    <p>10년간의 입시 노하우를 담은 전문 자료로 꿈을 현실로 만들어보세요.</p>
+                    <button class="btn-cta" onclick="document.querySelector('.book-section').scrollIntoView()">지금 구매하기</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="book-section">
+            <div class="container">
+                <div class="book-showcase">
+                    <div class="book-image">
+                        <img src="https://via.placeholder.com/300x400/2c5aa0/ffffff?text=대학원+입시+완벽+가이드" alt="대학원 입시 완벽 가이드">
+                    </div>
+                    <div class="book-details">
+                        <h3>대학원 입시 완벽 가이드</h3>
+                        <div class="book-price">
+                            <span class="original-price">₩50,000</span>
+                            <span class="current-price">₩29,900</span>
+                        </div>
+                        <ul class="book-features">
+                            <li>✓ 전공별 맞춤 입시 전략</li>
+                            <li>✓ 연구계획서 작성법</li>
+                            <li>✓ 면접 대비 핵심 포인트</li>
+                            <li>✓ 실제 합격 사례 분석</li>
+                        </ul>
+                        <button class="btn-purchase" onclick="purchase()">네이버페이로 구매</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>로그인</h3>
+            <form id="loginForm">
+                <input type="email" name="email" placeholder="이메일" required>
+                <input type="password" name="password" placeholder="비밀번호" required>
+                <button type="submit">로그인</button>
+            </form>
+            <div class="social-login">
+                <button class="naver-login" onclick="naverLogin()">네이버로 로그인</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 회원가입 모달 -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>회원가입</h3>
+            <form id="signupForm">
+                <input type="text" name="name" placeholder="이름" required>
+                <input type="email" name="email" placeholder="이메일" required>
+                <input type="password" name="password" placeholder="비밀번호" required>
+                <input type="password" name="confirmPassword" placeholder="비밀번호 확인" required>
+                <button type="submit">가입하기</button>
+            </form>
+            <div class="social-login">
+                <button class="naver-login" onclick="naverSignup()">네이버로 가입</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
